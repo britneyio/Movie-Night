@@ -11,11 +11,13 @@
 			background-image:url('background.jpg');
 			background-size:cover;
 			color:white;
-			
+
 		}
-		textarea{
-			border:2px solid black;
+		textarea,#name{
+			border:2px solid red;
 		}
+
+
 
 	
 		
@@ -26,9 +28,11 @@
 	<body>
 
 		<h1>The Okhiria Family Movie Night</h1>
-		<form action="mailto:britneys.smiths@gmail.com" method="POST" enctype="multipart/form-data" name="Movie Night">
+		<form method="post" action="email.php" name="Movie">
+		
 			<label for="name">Name: </label><br><br>
 			<input type="text" id="name" name="name"><br>
+			
 			<label for="seat">Pick a seat: </label><br>
 			<input type="radio" id="A1" name="seat" value="A1">
 			<label for="A1">A1</label>
@@ -48,9 +52,11 @@
 			<input type="radio" id="C3" name="seat" value="C3">
 			<label for="C3">C3</label><br>
 			<br>
+
 			<label for="snacks">List your snacks (max 3):</label><br>
-			<textarea name="snacks" rows="3" cols="30">
+			<textarea name="snacks" rows="3" cols="30" maxlength="50">
 			</textarea><br>
+
 			<input type="submit">
 
 		
